@@ -1,0 +1,82 @@
+{
+	"name": "Go",
+	"image": "mcr.microsoft.com/devcontainers/go",
+    "features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+            "configureZshAsDefaultShell": "true",
+			"username": "node",
+			"upgradePackages": "true"
+		},
+		"ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
+        },
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+                "[json]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				  },
+				  "audioCues.lineHasError": "off",
+				  "diffEditor.ignoreTrimWhitespace": false,
+				  "editor.acceptSuggestionOnEnter": "on",
+				  "editor.bracketPairColorization.enabled": true,
+                  "editor.defaultFormatter": "esbenp.prettier-vscode",
+				  "editor.formatOnSave": true,
+				  "editor.inlineSuggest.enabled": true,
+				  "editor.minimap.enabled": false,
+				  "editor.quickSuggestions": {
+				    "comments": true,
+				    "other": true,
+				    "strings": true
+				  },
+				  "editor.renderWhitespace": "none",
+				  "editor.snippetSuggestions": "top",
+				  "editor.suggest.preview": true,
+				  "editor.suggestSelection": "first",
+				  "editor.tabSize": 4,
+				  "eslint.alwaysShowStatus": true,
+				  "eslint.format.enable": true,
+                  "explorer.confirmDragAndDrop": false,
+				  "files.associations": {
+				    "Dockerfile*": "dockerfile"
+				  },
+				  "files.eol": "\n",
+				  "files.exclude": {
+				    "**/.classpath": true,
+				    "**/.factorypath": true,
+				    "**/.mypy_cache": true,
+				    "**/.project": true,
+				    "**/.pytest_cache": true,
+				    "**/.settings": true,
+				    "**/.venv": true,
+				    "**/__pycache__": true
+				  },
+				  "files.formatOnPaste": true,
+				  "files.formatOnSave": true,
+				  "files.insertFinalNewline": true,
+				  "files.trimTrailingWhitespace": true,
+                  "go.lintTool": "golangci-lint",
+                  "go.toolsManagement.autoUpdate": true,
+                  "workbench.editor.tabSizing": "shrink"
+                },
+			    "extensions": [
+					"dbaeumer.vscode-eslint",
+					"esbenp.prettier-vscode",
+					"streetsidesoftware.code-spell-checker",
+					"bierner.markdown-mermaid",
+					"golang.Go"
+				]
+		}
+	},
+    // コンテナ名をつける
+	"runArgs": ["--name", "go-dev"],
+    // volumeに名前を付ける & volumeに保存
+    "mounts": [
+		"source=${localWorkspaceFolderBasename},target=${containerWorkspaceFolder},type=volume"
+	],
+    "remoteUser": "go"
+}
