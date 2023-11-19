@@ -78,7 +78,7 @@
     "mounts": [
 		"source=${localWorkspaceFolderBasename},target=${containerWorkspaceFolder},type=volume"
 	],
-    "remoteUser": "go",
+    "remoteUser": "vscode",
 	"remoteEnv": {
 		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
 	  }
