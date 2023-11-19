@@ -78,5 +78,8 @@
     "mounts": [
 		"source=${localWorkspaceFolderBasename},target=${containerWorkspaceFolder},type=volume"
 	],
-    "remoteUser": "go"
+    "remoteUser": "go",
+	"remoteEnv": {
+		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+	  }
 }
