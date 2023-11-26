@@ -8,10 +8,6 @@
 			"username": "node",
 			"upgradePackages": "true"
 		},
-		"ghcr.io/devcontainers/features/git:1": {
-            "version": "latest",
-            "ppa": "false"
-        },
 		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
 	},
 	"customizations": {
