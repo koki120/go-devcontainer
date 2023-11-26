@@ -73,12 +73,7 @@
 		}
 	},
     // コンテナ名をつける
-	"runArgs": ["--name", "go-dev"],
-    // volumeに名前を付ける & volumeに保存
-    "mounts": [
-		"source=${localWorkspaceFolderBasename},target=${containerWorkspaceFolder},type=volume"
-	],
-    "remoteUser": "vscode",
+	"runArgs": ["--name", "go-dev"],   
 	"remoteEnv": {
 		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
 	  }
