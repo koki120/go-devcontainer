@@ -72,6 +72,9 @@
 				]
 		}
 	},
+	"args": {
+    "NODE_VERSION": "18" // Set to "none" to skip Node.js installation
+},
     // コンテナ名をつける
 	"runArgs": ["--name", "go-dev"],   
 	"remoteEnv": {
