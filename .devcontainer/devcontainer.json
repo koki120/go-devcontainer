@@ -10,7 +10,6 @@
     "ghcr.io/devcontainers/features/common-utils:2": {
       "installZsh": "true",
       "configureZshAsDefaultShell": "true",
-      "username": "node",
       "upgradePackages": "true"
     },
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
