@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  app:
+    image: mcr.microsoft.com/vscode/devcontainers/base:bookworm
+    command: sleep infinity
+    volumes:
+      - ..:/workspace

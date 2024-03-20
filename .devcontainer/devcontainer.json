@@ -1,35 +1,29 @@
 {
-  "name": "Go",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "args": {
-      "NODE_VERSION": "18" // Set to "none" to skip Node.js installation
-    }
-  },
-  "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {
-      "installZsh": "true",
-      "configureZshAsDefaultShell": "true",
-      "upgradePackages": "true"
+    "name": "go-dev-container-compose",
+    "dockerComposeFile": "docker-compose.yaml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "features": {
+        "ghcr.io/devcontainers/features/go:1": {
+            "version": "latest",
+            "golangciLintVersion": "latest"
+        },
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": "true",
+            "configureZshAsDefaultShell": "true",
+            "installOhMyZsh": "true",
+            "installOhMyZshConfig": "true"
+        }
     },
-    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-		"dbaeumer.vscode-eslint",
-		"esbenp.prettier-vscode",
-		"streetsidesoftware.code-spell-checker",
-		"bierner.markdown-mermaid",
-		"golang.Go",
-		"amazonwebservices.aws-toolkit-vscode"
-	]
-    }
-  },
-
-  // コンテナ名をつける
-  "runArgs": ["--name", "go-dev"],
-  "remoteEnv": {
-    "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
-  }
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "streetsidesoftware.code-spell-checker",
+                "bierner.markdown-mermaid",
+                "golang.Go",
+                "mhutchie.git-graph"
+            ]
+        }
+    },
+    "remoteUser": "vscode"
 }

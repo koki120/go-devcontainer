@@ -1,29 +1,72 @@
 {
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "accessibility.signals.chatRequestSent": {
+    "sound": "off"
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "accessibility.signals.chatResponsePending": {
+    "sound": "off"
   },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "accessibility.signals.clear": {
+    "sound": "off"
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "accessibility.signals.lineHasFoldedArea": {
+    "sound": "off"
   },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "accessibility.signals.lineHasInlineSuggestion": {
+    "sound": "off"
   },
-  "audioCues.lineHasError": "off",
+  "accessibility.signals.noInlayHints": {
+    "sound": "off"
+  },
+  "accessibility.signals.notebookCellCompleted": {
+    "sound": "off"
+  },
+  "accessibility.signals.onDebugBreak": {
+    "sound": "off"
+  },
+  "accessibility.signals.notebookCellFailed": {
+    "sound": "off"
+  },
+  "accessibility.signals.taskCompleted": {
+    "sound": "off"
+  },
+  "accessibility.signals.terminalQuickFix": {
+    "sound": "off"
+  },
+  "accessibility.signals.terminalCommandFailed": {
+    "sound": "off"
+  },
+  "accessibility.signals.terminalBell": {
+    "sound": "off"
+  },
+  "accessibility.signals.taskFailed": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasWarning": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasError": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasBreakpoint": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineModified": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineInserted": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineDeleted": {
+    "sound": "off"
+  },
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.acceptSuggestionOnEnter": "on",
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.addMissingImports": true,
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true
+    "source.addMissingImports": "always",
+    "source.fixAll.eslint": "always",
+    "source.fixAll.stylelint": "always"
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
@@ -37,22 +80,6 @@
   "editor.suggest.preview": true,
   "editor.suggestSelection": "first",
   "editor.tabSize": 4,
-  "eslint.alwaysShowStatus": true,
-  "eslint.format.enable": true,
-  "eslint.probe": [
-    "html",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "markdown",
-    "typescript",
-    "typescriptreact",
-    "vue"
-  ],
-  // tsconfig.eslint.jsonを自動認識
-  "eslint.workingDirectories": [
-    { "mode": "auto" }
-  ],
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
     "Dockerfile*": "dockerfile"
@@ -68,8 +95,8 @@
     "**/.venv": true,
     "**/__pycache__": true
   },
-  "files.formatOnPaste": true,
-  "files.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSaveMode": "file",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "go.lintOnSave": "file",
